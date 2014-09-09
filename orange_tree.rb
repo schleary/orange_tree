@@ -6,7 +6,6 @@ class OrangeGrove ##should take an array of trees
     @trees = trees
   end
 
-
   def count_all_the_oranges
     total = 0
     @trees.each do |tree|
@@ -109,11 +108,11 @@ end
 @trees.each do |tree|
   while tree.life == true do
     puts "The orange tree is #{tree.age} years old, #{tree.tree_height} inches tall, and has #{tree.count_the_oranges} oranges."
-    b = 1
-    while b < 5 && tree.life == true do
+    index = 1
+    while index < 5 && tree.life == true do
       puts "***#{tree.pickAnOrange}"
       puts "***The orange tree is #{tree.age} years old, #{tree.tree_height} inches tall, and has #{tree.count_the_oranges} oranges."
-       b += 1
+       index += 1
     end
     tree.one_year_passes
   end
